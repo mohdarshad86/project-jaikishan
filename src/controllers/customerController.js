@@ -29,7 +29,7 @@ const createCard = async (req, res) => {
 const getCustomer = async (req, res) => {
   const getCustomerData = await customerModel.find({
     status: "ACTIVE",
-    isDeleted: false,
+    //isDeleted: false, use this flag and findOneAndUpdate Method istead of findOneAndDelete
   });
   res.send({ msg: getCustomerData });
 };
