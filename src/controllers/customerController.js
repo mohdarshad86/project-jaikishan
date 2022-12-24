@@ -29,7 +29,7 @@ const createCard = async (req, res) => {
 const getCustomer = async (req, res) => {
   const getCustomerData = await customerModel.find({
     status: "ACTIVE",
-    isDeleted: true,
+    isDeleted: false,
   });
   res.send({ msg: getCustomerData });
 };
